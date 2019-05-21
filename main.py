@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from collections import defaultdict
 from logging import getLogger
 
@@ -12,7 +14,7 @@ _logger = getLogger(__name__)
 
 
 def _build_histogram(file_name='query_count_concept_attributes.tsv'):
-    print 'Loading'
+    print('Loading')
     _logger.info('Building histogram')
     df = pd.read_csv(file_name, sep='\t')
 
@@ -52,5 +54,4 @@ def _get_attributes(concept):
     return sorted(attributes.keys(), key=lambda attr: attributes[attr], reverse=True)
 
 
-app.run(debug=True)
-
+app.run(host='0.0.0.0', debug=True)

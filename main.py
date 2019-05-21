@@ -11,7 +11,7 @@ api = flask_restful.Api(app)
 _logger = getLogger(__name__)
 
 
-def _build_histogram(file_name='/home/oren/work/walmartca/hackathon/query_count_concept_attributes.tsv'):
+def _build_histogram(file_name='query_count_concept_attributes.tsv'):
     print 'Loading'
     _logger.info('Building histogram')
     df = pd.read_csv(file_name, sep='\t')

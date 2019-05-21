@@ -1,6 +1,5 @@
 *.pyc
 .idea/
-query_count_concept_attributes.tsv
 __pycache__
 *.pyc
 *.pyo

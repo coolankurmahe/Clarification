@@ -1,0 +1,2 @@
+docker build -t clarification .
+docker run --rm -it -p5000:5000 clarification

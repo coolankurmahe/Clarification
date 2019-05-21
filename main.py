@@ -45,7 +45,8 @@ histogram = _build_histogram()
 
 @app.route('/get_popular_attributes')
 def get():
-    return jsonify(_get_attributes(request.args['concept']))
+    attributes = _get_attributes(request.args['concept'])
+    return jsonify({'attributes': attributes})
 
 
 def _get_attributes(concept):
